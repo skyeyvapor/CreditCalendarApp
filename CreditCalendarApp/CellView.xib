@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CellView" customModule="CreditCalendarApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lo1-YC-1wL">
+                    <rect key="frame" x="60" y="60" width="40" height="40"/>
+                    <color key="backgroundColor" red="0.69801559820000003" green="0.72336632010000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="57d-qT-WKk"/>
+                        <constraint firstAttribute="height" constant="40" id="5vB-Tf-Wep"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa3-h5-4C3">
+                    <rect key="frame" x="62" y="72" width="36" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.34711146259999998" green="0.0" blue="0.01035497482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.11752057469054766" green="0.1997883921581983" blue="0.40987289507772018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Aa3-h5-4C3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ir7-Su-HS2"/>
+                <constraint firstItem="Aa3-h5-4C3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UzJ-rB-Ry7"/>
+                <constraint firstItem="Lo1-YC-1wL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jEC-fq-AGw"/>
+                <constraint firstItem="Lo1-YC-1wL" firstAttribute="centerY" secondItem="Aa3-h5-4C3" secondAttribute="centerY" id="tk0-cA-eY1"/>
+                <constraint firstItem="Lo1-YC-1wL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uYA-Mm-MPa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayLabel" destination="Aa3-h5-4C3" id="65f-77-9VH"/>
+                <outlet property="selectedView" destination="Lo1-YC-1wL" id="JWd-sg-OSt"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -12,9 +12,13 @@
 		5B92536E1E8E1142008E3744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92536C1E8E1142008E3744 /* Main.storyboard */; };
 		5B9253701E8E1142008E3744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B92536F1E8E1142008E3744 /* Assets.xcassets */; };
 		5B9253731E8E1142008E3744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9253711E8E1142008E3744 /* LaunchScreen.storyboard */; };
+		5B92537D1E8E134B008E3744 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92537C1E8E134B008E3744 /* CellView.swift */; };
+		5B92537F1E8E13DF008E3744 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B92537E1E8E13DF008E3744 /* CellView.xib */; };
+		7E7D8760F38F5BDA2450A738 /* Pods_CreditCalendarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9D9FD2AFCA8F072EC5A8A0 /* Pods_CreditCalendarApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C9D9FD2AFCA8F072EC5A8A0 /* Pods_CreditCalendarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditCalendarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9253651E8E1142008E3744 /* CreditCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9253681E8E1142008E3744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B92536A1E8E1142008E3744 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		5B92536F1E8E1142008E3744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9253721E8E1142008E3744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B9253741E8E1142008E3744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B92537C1E8E134B008E3744 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		5B92537E1E8E13DF008E3744 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		BC5813E55D0A3E11327D8D28 /* Pods-CreditCalendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCalendarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreditCalendarApp/Pods-CreditCalendarApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FBC7D92BB9E0DBB1B5A47082 /* Pods-CreditCalendarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditCalendarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CreditCalendarApp/Pods-CreditCalendarApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7D8760F38F5BDA2450A738 /* Pods_CreditCalendarApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019B7B8693FE6FE59C50601A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC5813E55D0A3E11327D8D28 /* Pods-CreditCalendarApp.debug.xcconfig */,
+				FBC7D92BB9E0DBB1B5A47082 /* Pods-CreditCalendarApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4B936DD95D1E70EB1C54A697 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C9D9FD2AFCA8F072EC5A8A0 /* Pods_CreditCalendarApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B92535C1E8E1142008E3744 = {
 			isa = PBXGroup;
 			children = (
 				5B9253671E8E1142008E3744 /* CreditCalendarApp */,
 				5B9253661E8E1142008E3744 /* Products */,
+				019B7B8693FE6FE59C50601A /* Pods */,
+				4B936DD95D1E70EB1C54A697 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +88,8 @@
 				5B92536F1E8E1142008E3744 /* Assets.xcassets */,
 				5B9253711E8E1142008E3744 /* LaunchScreen.storyboard */,
 				5B9253741E8E1142008E3744 /* Info.plist */,
+				5B92537C1E8E134B008E3744 /* CellView.swift */,
+				5B92537E1E8E13DF008E3744 /* CellView.xib */,
 			);
 			path = CreditCalendarApp;
 			sourceTree = "<group>";
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B9253771E8E1142008E3744 /* Build configuration list for PBXNativeTarget "CreditCalendarApp" */;
 			buildPhases = (
+				A92C2C4B3F8CFAE869FA82B8 /* [CP] Check Pods Manifest.lock */,
 				5B9253611E8E1142008E3744 /* Sources */,
 				5B9253621E8E1142008E3744 /* Frameworks */,
 				5B9253631E8E1142008E3744 /* Resources */,
+				4D669ACE1379744211D75196 /* [CP] Embed Pods Frameworks */,
+				0C0F1535C6FFFB370AEB0170 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,12 +158,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9253731E8E1142008E3744 /* LaunchScreen.storyboard in Resources */,
+				5B92537F1E8E13DF008E3744 /* CellView.xib in Resources */,
 				5B9253701E8E1142008E3744 /* Assets.xcassets in Resources */,
 				5B92536E1E8E1142008E3744 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C0F1535C6FFFB370AEB0170 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CreditCalendarApp/Pods-CreditCalendarApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D669ACE1379744211D75196 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CreditCalendarApp/Pods-CreditCalendarApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92C2C4B3F8CFAE869FA82B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B9253611E8E1142008E3744 /* Sources */ = {
@@ -139,6 +221,7 @@
 			files = (
 				5B92536B1E8E1142008E3744 /* ViewController.swift in Sources */,
 				5B9253691E8E1142008E3744 /* AppDelegate.swift in Sources */,
+				5B92537D1E8E134B008E3744 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +344,7 @@
 		};
 		5B9253781E8E1142008E3744 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC5813E55D0A3E11327D8D28 /* Pods-CreditCalendarApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X9U9K9DBF5;
@@ -274,6 +358,7 @@
 		};
 		5B9253791E8E1142008E3744 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC7D92BB9E0DBB1B5A47082 /* Pods-CreditCalendarApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X9U9K9DBF5;
@@ -304,6 +389,7 @@
 				5B9253791E8E1142008E3744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
