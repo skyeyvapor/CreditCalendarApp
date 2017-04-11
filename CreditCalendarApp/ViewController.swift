@@ -12,6 +12,7 @@ import JTAppleCalendar
 class ViewController: UIViewController, JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
 
     @IBOutlet var calendarView: JTAppleCalendarView!  // 建立日曆視圖控件和類文件的屬性之間的連結  // 從Main.storyboard來的
+    // Important: JTAppleCalendar is a UICollectionView subclass. Therefore, cells are being re-used when the calendar is scrolled.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +27,7 @@ class ViewController: UIViewController, JTAppleCalendarViewDataSource, JTAppleCa
         self.view.addSubview(calendarView)  // 將日曆視圖添加到當前視圖控制器的根視圖中
     }
     
+    // delegate protocol method to allow us to see the beautiful date cells we have designed earlier.
     // 添加一個代理方法，用來監聽日曆中的數據單元格即將顯示的事件
     func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
         
@@ -44,6 +46,7 @@ class ViewController: UIViewController, JTAppleCalendarViewDataSource, JTAppleCa
     }
     
     // 添加一個方法，用來響應日期數字單元格被選擇的事件
+    // 如果沒有這方法，選擇後滑動到下頁面，會是random的日期被選擇，因為JTAppleCalendar is a UICollectionView subclass，cell會被重複使用
     func handleCellSelection(view: JTAppleDayCellView?, cellState: CellState)
     {
         // 首先獲得當前被選擇的日期數字單元格
@@ -64,6 +67,7 @@ class ViewController: UIViewController, JTAppleCalendarViewDataSource, JTAppleCa
         print("Data:\(cellState.date)")  // 同時在控制台輸出當前的日期
     }
     
+    // The data-source protocol has only one function which needs to return a value of type ConfigurationParameters. This value requires 7 sub-values.
     // 添加一個代理方法，用來配置日曆的相關參數  // 可以另創一個.swift，用成extension
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let formatter = DateFormatter()  // 初始化一個日期格式對象
